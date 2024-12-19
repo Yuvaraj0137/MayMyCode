@@ -1,7 +1,7 @@
 /* About Us Section */
 .about-us {
     padding: 40px;
-    background: linear-gradient(to right, #41bec9, #2575fc);
+    background: #eff1ef;
     text-align: center;
 }
 
@@ -13,7 +13,7 @@
 
 .about-us p {
     font-size: 1.2em;
-    color: #ffffff;
+    color: #000000;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
