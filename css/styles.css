@@ -72,13 +72,13 @@ nav {
 .nav-links.active {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #41bec9, #2575fc);
+    background: linear-gradient(to right, #97f1af, #ffffff);
     color: #000000;
     padding: 1rem;
     position: absolute;
     top: 65px;
     bottom: 330px;
-    left: 330px;
+    left: 5px;
     right: 0;
     width: 100%;
     z-index: 1000;
