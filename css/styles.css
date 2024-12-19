@@ -1,0 +1,592 @@
+/* General Reset */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #6e9c11;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background: #fff;
+    height: 3px;
+    width: 30px;
+    margin: 1px 0;
+}
+ 
+
+
+/* Toggle button styles */
+.nav-toggle {
+    display: none;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #41bec9, #2575fc);
+    color: #000000;
+    padding: 1rem;
+    position: absolute;
+    top: 65px;
+    bottom: 330px;
+    left: 330px;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links.active li {
+    margin: 1rem 0;
+    left: 65px;
+    right: 50px;
+}
+
+/* Show toggle button on smaller screens */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: linear-gradient(to right, #41bec9, #2575fc);
+    color: #fff;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+
+.hero .btn:hover {
+    background-color: #b8a906;
+}
+
+/* Cursor animation */
+.cursor {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #ffffff;
+    animation: blink 0.6s steps(2) infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* Courses Section */
+.courses {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.course {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Style for the floating effect on the batch text */
+.floating-text {
+    position: relative;
+    animation: floatAnimation 0.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+.course-header h2.floating-text {
+    color: #038be6; /* Set the color you prefer */
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold; /* Make it bold, if desired */
+}
+
+
+/* Keyframes for floating effect */
+@keyframes floatAnimation {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px; /* Move slightly to the right */
+    }
+    100% {
+        left: 0; /* Return to the original position */
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(to right, #41bec9, #2575fc);
+    color: #000000;
+    padding: 20px 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000000; /* Highlighted title color */
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    color: #000000; /* Icon color */
+}
+
+.footer-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+
+ 
+/* Animation for course cards */
+.course {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.course.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Basic styling for the course section */
+#course-info {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#course-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#course-info h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#course-info p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* 
+.explore-btn {
+    background: #FBBB04;
+    padding: 10px 50px;
+    color: #000000;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.explore-btn:hover {
+    background: linear-gradient(to right,#bee64e, #dfcc77);
+} */
+
+/* Style for Enroll Button */
+/*
+.enroll-btn {
+    padding: 10px 50px;
+    background: rgb(47, 189, 64);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+
+.enroll-btn:hover {
+    background: linear-gradient(to right,#bee64e, #dfcc77);
+} */
+
+/* Button Container */
+.button-container {
+    display: flex; /* Make buttons flex items */
+    flex-direction: row; /* Align items horizontally */
+    justify-content: center; /* Center items */
+    gap: 30px; /* Add space between buttons */
+    margin-top: 20px; /* Add spacing above the buttons */
+}
+
+/* Button Styling */
+.explore-btn,
+.enroll-btn {
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold;
+    padding: 15px 40px; /* Add padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.explore-btn {
+    background-color: #f4b400; /* Yellow */
+    color: #ffffff;
+}
+
+.enroll-btn {
+    background-color: #34a853; /* Green */
+    color: #ffffff;
+}
+
+/* Hover Effects */
+.explore-btn:hover,
+.enroll-btn:hover {
+    transform: scale(1.2); /* Add scaling effect */
+}
+
+/* Responsive Adjustment for Mobile */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: row; /* Keep side by side on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container {
+        flex-direction: row; /* Ensure buttons remain side by side */
+        gap: 5px; /* Slightly reduce the gap for smaller screens */
+    }
+
+    .explore-btn,
+    .enroll-btn {
+        font-size: 0.9rem; /* Smaller font size on very small screens */
+        padding: 8px 15px; /* Reduce padding */
+    }
+}
+
+
+/* Styling for the course details and features section */
+/* Container Styling */
+/*
+.course-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfcfcce;  
+    padding: 15px 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+*/
+
+/* Course Features */
+.course-features ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Evenly space out items */
+    gap: 15px;
+}
+
+.course-features li {
+    color: #060000; /* White text */
+    font-size: 1.1rem; /* Medium font size */
+    font-weight: 500;
+    display: flex;
+    
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    text-align: center;
+    width: 200px;
+}
+
+/* Icons Styling */
+.course-features li::before {
+    content: ""; /* Placeholder for image icons */
+    display: block;
+    width: 170px;
+    height: 50px;
+    background: url('icon-placeholder.png') no-repeat center center;
+    background-size: contain;
+    gap: 0px;
+}
+
+ 
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .course-features ul {
+        font-size: 1.1em;
+    }
+
+    .course-features {
+        padding: 20px;
+    }
+}
+
+/* Instructor Info Section */
+#instructor-info {
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+#instructor-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#instructor-info h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#instructor-info p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Style for the image if added */
+#instructor-info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Popup Container */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.popup-header h2 {
+    color: #333;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.product-info img {
+    border-radius: 5px;
+}
+
+.product-info p {
+    color: #2575fc;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.phone-input {
+    display: flex;
+    gap: 5px;
+}
+
+.phone-input select {
+    width: 30%;
+}
+
+.buy-btn {
+    background-color: #2575fc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.buy-btn:hover {
+    background-color: #1b5cb8;
+}

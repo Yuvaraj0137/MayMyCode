@@ -1,0 +1,172 @@
+/* About Us Section */
+.about-us {
+    padding: 40px;
+    background: linear-gradient(to right, #41bec9, #2575fc);
+    text-align: center;
+}
+
+.about-us h1 {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1.2em;
+    color: #ffffff;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* General Reset */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #6e9c11;
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background: #fff;
+    height: 3px;
+    width: 30px;
+    margin: 1px 0;
+}
+ 
+
+
+/* Toggle button styles */
+.nav-toggle {
+    display: none;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #41bec9, #2575fc);
+    color: #000000;
+    padding: 1rem;
+    position: absolute;
+    top: 65px;
+    bottom: 330px;
+    left: 300px;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links.active li {
+    margin: 1rem 0;
+    left: 65px;
+    right: 50px;
+}
+
+/* Show toggle button on smaller screens */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(to right, #41bec9, #2575fc);
+    color: #000000;
+    padding: 20px 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000000; /* Highlighted title color */
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    color: #000000; /* Icon color */
+}
+
+.footer-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #000000;
+}
