@@ -71,20 +71,20 @@ nav {
 
 .menu-toggle .bar {
     background: #fff;
-    height: 30px;
+    height: 3px;
     width: 30px;
     margin: 1px 0;
 }
  
 
 
-* Toggle button styles */
+/* Toggle button styles */
 .nav-toggle {
     display: none;
     background: #ffffff;
     color: #000000;
     border: none;
-    font-size: 4rem; /* Reduced size */
+    font-size: 3.5rem; /* Reduced size */
     cursor: pointer;
     margin-right: -1rem; /* Adjusted margin to move right */
 }
@@ -98,7 +98,7 @@ nav {
     position: absolute;
     top: 65px;
     left: 250px;
-    right: 2px;
+    right: -2px;
     z-index: 1000;
     text-align: right; /* Align text to the right */
     border-radius: 10px; /* Added round corners */
@@ -120,6 +120,7 @@ nav {
         flex-direction: column;
     }
 }
+
 
 /* Footer Styles */
 footer {
@@ -169,6 +170,7 @@ footer {
     font-size: 0.9rem;
     color: #000000;
 }
+
 
 
 /* whatspp and call icons*/
