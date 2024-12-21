@@ -84,7 +84,7 @@ nav {
     background: #ffffff;
     color: #000000;
     border: none;
-    font-size: 2.5rem; /* Reduced size */
+    font-size: 2rem; /* Reduced size */
     cursor: pointer;
     margin-right: -1rem; /* Adjusted margin to move right */
 }
