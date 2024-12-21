@@ -71,7 +71,7 @@ nav {
 
 .menu-toggle .bar {
     background: #fff;
-    height: 3px;
+    height: 30px;
     width: 30px;
     margin: 1px 0;
 }
@@ -84,7 +84,7 @@ nav {
     background: #ffffff;
     color: #000000;
     border: none;
-    font-size: 3.5rem; /* Reduced size */
+    font-size: 4rem; /* Reduced size */
     cursor: pointer;
     margin-right: -1rem; /* Adjusted margin to move right */
 }
