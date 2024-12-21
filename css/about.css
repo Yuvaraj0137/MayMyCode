@@ -78,33 +78,34 @@ nav {
  
 
 
-/* Toggle button styles */
+* Toggle button styles */
 .nav-toggle {
     display: none;
     background: #ffffff;
     color: #000000;
     border: none;
-    font-size: 3rem;
+    font-size: 3.5rem; /* Reduced size */
     cursor: pointer;
-    margin-right: 1rem;
+    margin-right: -1rem; /* Adjusted margin to move right */
 }
 
 .nav-links.active {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #97f1af, #59a3e4);
+    background: #edf2f8;
     color: #000000;
     padding: 1rem;
     position: absolute;
     top: 65px;
-    left: 350px;
-    right: 0;
+    left: 300px;
+    right: 15px;
     z-index: 1000;
     text-align: right; /* Align text to the right */
+    border-radius: 10px; /* Added round corners */
 }
 
 .nav-links.active li {
-    margin: 1rem 1rem; /* Add margin for spacing */
+    margin: 1rem 0rem; /* Add margin for spacing */
     text-align: right; /* Ensure text aligns right */
 }
 
