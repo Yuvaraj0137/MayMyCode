@@ -78,7 +78,7 @@ nav {
     position: absolute;
     top: 65px;
     left: 250px;
-    right: -5px;
+    right: 2px;
     z-index: 1000;
     text-align: right; /* Align text to the right */
     border-radius: 10px; /* Added round corners */
